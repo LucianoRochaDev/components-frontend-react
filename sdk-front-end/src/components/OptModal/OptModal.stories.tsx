@@ -1,7 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-
+import React from 'react';
 import { OptModal } from '.';
 
 export default {
@@ -9,15 +8,20 @@ export default {
   component: OptModal,
 } as Meta;
 
-const t = () => console.log('teste');
+const t = () => {
+  console.log('');
+};
+
+const body = <h3 style={{ textAlign: 'center' }}>s</h3>;
 
 export const StoryOptModal: Story = (args) => (
   <OptModal
-    title="Componente OptModal"
-    subtitle="O componente modal está aqui para atender todas as suas necessidades no desenvolvimento de sua pagina web."
     open
+    loading={false}
+    title="Cl"
+    body={body}
+    actionButtonCancel={t}
     buttonCancelActive
-    onClose={t}
     actionButtonConfirm={t}
     {...args}
   />
